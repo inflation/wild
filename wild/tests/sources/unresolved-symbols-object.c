@@ -6,8 +6,12 @@
 //#LinkArgs:--unresolved-symbols=report-all
 //#ExpectError:foo
 
-//#Config:ignore-all:default
-//#LinkArgs:--unresolved-symbols=ignore-all
+//#Config:ignore-all-pie:default
+//#LinkArgs:--unresolved-symbols=ignore-all --pie -z now
+//#EnableLinker:lld
+
+//#Config:ignore-all-no-pie:default
+//#LinkArgs:--unresolved-symbols=ignore-all --no-pie -z now
 
 //#Config:ignore-in-object-files:default
 //#LinkArgs:--unresolved-symbols=ignore-in-object-files
